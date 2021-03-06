@@ -12,7 +12,11 @@ import org.springframework.web.filter.CorsFilter;
 /**
  * 处理前后端跨域问题
  * @author lijinghai
+<<<<<<< HEAD
  * @Date 2021-1-26
+=======
+ * @Date 2021-1-27
+>>>>>>> dev
  */
 @Configuration
 @Slf4j
