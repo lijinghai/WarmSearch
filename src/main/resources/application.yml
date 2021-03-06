@@ -41,3 +41,6 @@ allowed:
 
 allowed1:
   origin1: http://localhost:8080
+
+allowed2:
+  origin2: http://localhost:8093
