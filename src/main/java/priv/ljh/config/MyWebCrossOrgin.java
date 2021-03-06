@@ -22,6 +22,8 @@ public class MyWebCrossOrgin {
     private String allowedOrigin;
     @Value("${allowed1.origin1}")
     private String allowedOrigin1;
+    @Value("${allowed2.origin2}")
+    private String allowedOrigin2;
     @Bean
     public CorsFilter corsFilter() {
         log.info(this.allowedOrigin);
@@ -31,6 +33,7 @@ public class MyWebCrossOrgin {
         //这里填写请求的前端服务器
         config.addAllowedOrigin(allowedOrigin);
         config.addAllowedOrigin(allowedOrigin1);
+        config.addAllowedOrigin(allowedOrigin2);
         //2) 是否发送Cookie信息
         config.setAllowCredentials(true);
         //3) 允许的请求方式
