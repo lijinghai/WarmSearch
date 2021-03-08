@@ -60,6 +60,7 @@ public class MySwagger {
                 .apis(Predicates.or(
                         RequestHandlerSelectors.basePackage("priv.ljh.operate.controller"),
                         RequestHandlerSelectors.basePackage("priv.ljh.uniapp.controller"),
+                        RequestHandlerSelectors.basePackage("priv.ljh.pc.controller"),
                         RequestHandlerSelectors.basePackage("priv.ljh.utils")
                 ))
                 //paths() 过滤什么路径
