@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @MapperScan("priv.ljh.uniapp.mapper")  在项目启动类上加入@MapperScan注解，用于批量扫描
  */
-@MapperScan("priv.ljh.uniapp.mapper")
+@MapperScan({"priv.ljh.uniapp.mapper","priv.ljh.pc.mapper"})
 @SpringBootApplication
 public class WarmSearchApplication {
 
