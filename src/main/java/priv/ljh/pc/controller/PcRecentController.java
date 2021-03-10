@@ -112,6 +112,5 @@ public class PcRecentController {
         res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK,page);
         return res;
     }
-
 }
 
