@@ -26,9 +26,9 @@ public interface PcGoodsdetailMapper extends BaseMapper<PcGoodsdetail> {
 
     /**
      * 显示详情页信息
-     * @param id
+     * @param
      * @return
      */
-    @Select("select pg.id, pg.panelId, pg.type, pg.goodsId, pg.url, pg.create_time, pg.updated_time, pg.goods_name, pg.goods_detail, pg.status,c.id, c.c_title from pc_goodsdetail pg, category c where pg.panelId = c.id=#{id}")
+    @Select("select  pg.panelId, pg.type, pg.goodsId, pg.url, pg.create_time, pg.updated_time, pg.goods_name, pg.goods_detail, pg.status,c.id, c.c_title from pc_goodsdetail pg, category c where pg.panelId = c.id and pg.panelId=#{id}")
     List<Map> getAllGoods(@Param("id")Integer id);
 }
