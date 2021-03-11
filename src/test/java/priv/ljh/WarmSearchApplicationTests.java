@@ -244,7 +244,11 @@ class WarmSearchApplicationTests {
         //4、策略配置
         StrategyConfig strategy = new StrategyConfig();
         // 设置要映射的表名
+<<<<<<< HEAD
         strategy.setInclude("pc_carousel","pc_recent");
+=======
+        strategy.setInclude("pc_carousel","pc_recent","pc_urgent");
+>>>>>>> dev
 
         // 设置要映射的表名
         //包的名字下划线转驼峰命名
