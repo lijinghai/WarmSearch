@@ -232,7 +232,7 @@ class WarmSearchApplicationTests {
 
         //3、包的配置
         PackageConfig pc = new PackageConfig();
-        //只需要改实体类名字 和包名 还有 数据库配置即可
+        //只需要改实体类名字 和包名 还有数据库配置即可
         pc.setModuleName("pc");
         pc.setParent("priv.ljh");
         pc.setEntity("entity");
