@@ -40,6 +40,10 @@ public class PcGoodsdetail implements Serializable {
     @TableField("panelId")
     private Integer panelId;
 
+    @ApiModelProperty(value = "物品种类索引")
+    @TableField("kindId")
+    private Integer kindId;
+
     @ApiModelProperty(value = "类型")
     private Integer type;
 

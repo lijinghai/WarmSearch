@@ -44,7 +44,7 @@ public class PcGoodsdetailController {
     @Autowired
     private PcGoodsdetailService pcGoodsdetailService;
 
-    @ApiOperation("增加一条PC端最新信息")
+    @ApiOperation("增加一条PC端物品详情信息")
     @PostMapping
     public ResultResponse create(PcGoodsdetail pcGoodsdetail, MultipartFile file, HttpServletRequest req){
         ResultResponse res = null;
@@ -82,7 +82,7 @@ public class PcGoodsdetailController {
         return res;
     }
 
-    @ApiOperation("根据id删除一条PC端最新信息数据")
+    @ApiOperation("根据id删除一条PC端物品详情信息数据")
     @PostMapping("/delete")
     public ResultResponse deletePcGoodsdetail (@RequestParam("id") Integer id){
         ResultResponse res = null;
@@ -91,7 +91,7 @@ public class PcGoodsdetailController {
         return res;
     }
 
-    @ApiOperation("修改一条PC端最新信息数据")
+    @ApiOperation("修改一条PC端物品详情信息数据")
     @PutMapping
     public ResultResponse updatePcGoodsdetail(@RequestBody PcGoodsdetail pcGoodsdetail){
         ResultResponse res = null;
@@ -100,7 +100,7 @@ public class PcGoodsdetailController {
         return res;
     }
 
-    @ApiOperation("查询PC端最新信息信息")
+    @ApiOperation("查询PC端物品详情信息")
     @GetMapping
     public ResultResponse queryPcGoodsdetail(@RequestParam("page") int pageNo, @RequestParam("limit") int limit, @RequestParam("sort") String idSort){
         ResultResponse res = null;
@@ -110,13 +110,24 @@ public class PcGoodsdetailController {
         res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK,page);
         return res;
     }
-    @ApiOperation("查询所有PC端最新信息信息")
+    @ApiOperation("查询所有PC端物品详情信息")
     @GetMapping("/all")
     public ResultResponse queryPcGoodsdetailAll(@RequestParam("id") Integer id,@RequestParam("page") int pageNo, @RequestParam("limit") int limit, @RequestParam("sort") String idSort){
         ResultResponse res = null;
         List<Map> allGoods = pcGoodsdetailMapper.getAllGoods(id);
         log.info("allGoods====>"+allGoods);
         MyPage page = this.pcGoodsdetailService.searchPcGoodsDetail1(pageNo, limit, idSort,allGoods);
+        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK,page);
+        return res;
+    }
+
+    @ApiOperation("查询所有PC端各种类物品详情信息")
+    @GetMapping("/allkinds")
+    public ResultResponse queryPcGoodsdetailAllkinds(@RequestParam("id") Integer id,@RequestParam("page") int pageNo, @RequestParam("limit") int limit, @RequestParam("sort") String idSort){
+        ResultResponse res = null;
+        List<Map> allGoods = pcGoodsdetailMapper.getAllGoodsKinds(id);
+        log.info("allGoods====>"+allGoods);
+        MyPage page = this.pcGoodsdetailService.searchPcGoodsDetailKinds(pageNo, limit, idSort,allGoods);
         res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK,page);
         return res;
     }

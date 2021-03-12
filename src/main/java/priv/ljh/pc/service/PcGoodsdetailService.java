@@ -37,4 +37,14 @@ public interface PcGoodsdetailService extends IService<PcGoodsdetail> {
      * @return
      */
     public MyPage searchPcGoodsDetail1(int pageNo, int limit, String idSorted, List<Map> pcGoodsdetails);
+
+    /**
+     * 根据种类查询
+     * @param pageNo
+     * @param limit
+     * @param idSorted
+     * @param pcGoodsdetails
+     * @return
+     */
+    public MyPage searchPcGoodsDetailKinds(int pageNo, int limit, String idSorted, List<Map> pcGoodsdetails);
 }
