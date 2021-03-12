@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 
+ * PC端物品种类信息
  * </p>
  *
  * @author lijinghai
@@ -21,7 +21,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="PcGoodskind对象", description="")
+@ApiModel(value="PcGoodskind对象", description="物品种类")
 public class PcGoodskind implements Serializable {
 
     private static final long serialVersionUID = 1L;

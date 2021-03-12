@@ -37,7 +37,7 @@ public interface PcGoodsdetailMapper extends BaseMapper<PcGoodsdetail> {
      * @param id
      * @return
      */
-    @Select("select  g.panelId, g.kindId, g.type, g.goodsId, g.url, g.create_time, g.updated_time, g.goods_name, g.goods_detail, g.status, k.id,k.kind from pc_goodsdetail g, pc_goodskind where g.kindId = k.id and  g.kindId=#{id}")
+    @Select("select  g.panelId, g.kindId, g.type, g.goodsId, g.url, g.create_time, g.updated_time, g.goods_name, g.goods_detail, g.status, k.id,k.kind from pc_goodsdetail g, pc_goodskind k where g.kindId = k.id and g.kindId=#{id}")
     List<Map> getAllGoodsKinds(@Param("id")Integer id);
 
 }
