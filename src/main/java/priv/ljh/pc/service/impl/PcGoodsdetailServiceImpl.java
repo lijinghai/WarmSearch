@@ -71,4 +71,28 @@ public class PcGoodsdetailServiceImpl extends ServiceImpl<PcGoodsdetailMapper, P
 
         return page;
     }
+
+    @Override
+    public MyPage searchPcGoodsDetailKinds(int pageNo, int limit, String idSorted, List<Map> pcGoodsdetails) {
+        MyPage page = null;
+        List<Map> pcGoodsdetailsList = new ArrayList<>();
+        pcGoodsdetailsList.addAll(pcGoodsdetails);
+        if(idSorted != null && idSorted.startsWith("-")){
+            Collections.reverse(pcGoodsdetailsList);
+        }
+        int total = pcGoodsdetailsList.size();
+        int maxPageNo = pcGoodsdetailsList.size()%limit == 0? pcGoodsdetailsList.size()/limit:pcGoodsdetailsList.size()/limit + 1;
+        if(pageNo>maxPageNo){
+            pageNo = maxPageNo;
+        }
+        int beginIndex = (pageNo-1)*limit;
+        int endIndex = pageNo*limit;
+        if(endIndex>total){
+            endIndex = total;
+        }
+
+        page = new MyPage(pcGoodsdetailsList.subList(beginIndex, endIndex), total);
+
+        return page;
+    }
 }
