@@ -40,4 +40,13 @@ public interface PcGoodsdetailMapper extends BaseMapper<PcGoodsdetail> {
     @Select("select g.id,  g.panelId, g.kindId, g.type, g.goodsId, g.url, g.create_time, g.updated_time, g.goods_name, g.goods_detail, g.status, k.id,k.kind from pc_goodsdetail g, pc_goodskind k where g.kindId = k.id and g.kindId=#{id}")
     List<Map> getAllGoodsKinds(@Param("id")Integer id);
 
+    /**
+     * 根据物品id查询数据
+     * @param id
+     * @param goodsId
+     * @return
+     */
+    @Select("select g.id,  g.panelId, g.kindId, g.type, g.goodsId, g.url, g.create_time, g.updated_time, g.goods_name, g.goods_detail, g.status, k.id,k.kind from pc_goodsdetail g, pc_goodskind k where g.kindId = k.id and g.kindId=#{id} and g.goodsId=#{goodsId}")
+    List<Map> getAllGoodsId(@Param("id")Integer id,@Param("goodsId")Integer goodsId);
+
 }

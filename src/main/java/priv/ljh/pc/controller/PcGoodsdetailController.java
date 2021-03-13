@@ -131,5 +131,16 @@ public class PcGoodsdetailController {
         res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK,page);
         return res;
     }
+
+    @ApiOperation("根据goodsID查询所有PC端各种类物品详情信息")
+    @GetMapping("/goodsid")
+    public ResultResponse queryPcGoodsId(@RequestParam("goodsId") Integer goodsId,@RequestParam("id") Integer id,@RequestParam("page") int pageNo, @RequestParam("limit") int limit, @RequestParam("sort") String idSort){
+        ResultResponse res = null;
+        List<Map> allGoods = pcGoodsdetailMapper.getAllGoodsId(id,goodsId);
+        log.info("allGoods====>"+allGoods);
+        MyPage page = this.pcGoodsdetailService.searchPcGoodsDetailKinds(pageNo, limit, idSort,allGoods);
+        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK,page);
+        return res;
+    }
 }
 
