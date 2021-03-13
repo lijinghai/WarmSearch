@@ -112,5 +112,16 @@ public class PcUrgentController {
         return res;
     }
 
+    @ApiOperation("根据goodsid查询所有PC端急需物品信息")
+    @GetMapping("/goodsid")
+    public ResultResponse queryPcCarousel(@RequestParam("goodsId") Integer goodsId,@RequestParam("page") int pageNo, @RequestParam("limit") int limit, @RequestParam("sort") String idSort){
+        ResultResponse res = null;
+        List<Map> pcUrgent = pcUrgentMapper.getUrgentId(goodsId);
+        log.info("pcUrgent====>"+pcUrgent);
+        MyPage page = this.pcUrgentService.searchPcUrgentId(pageNo, limit, idSort,pcUrgent);
+        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK,page);
+        return res;
+    }
+
 }
 
