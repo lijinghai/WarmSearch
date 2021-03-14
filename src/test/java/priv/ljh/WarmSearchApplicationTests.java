@@ -247,6 +247,7 @@ class WarmSearchApplicationTests {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         strategy.setInclude("pc_carousel","pc_recent");
 =======
         strategy.setInclude("pc_carousel","pc_recent","pc_urgent");
@@ -256,6 +257,9 @@ class WarmSearchApplicationTests {
 >>>>>>> dev
 =======
         strategy.setInclude("pc_carousel","pc_recent","pc_urgent","pc_goodsdetail","pc_goodskind");
+>>>>>>> dev
+=======
+        strategy.setInclude("pc_carousel","pc_recent","pc_urgent","pc_goodsdetail","pc_goodskind","pc_user");
 >>>>>>> dev
 
         // 设置要映射的表名
