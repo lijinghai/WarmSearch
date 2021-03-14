@@ -12,10 +12,7 @@ import priv.ljh.operate.entity.User;
 import priv.ljh.pc.entity.PcUser;
 import priv.ljh.pc.mapper.PcUserMapper;
 import priv.ljh.pc.service.PcUserService;
-import priv.ljh.utils.Constants;
-import priv.ljh.utils.MyPage;
-import priv.ljh.utils.PCJwtUtils;
-import priv.ljh.utils.ResultResponse;
+import priv.ljh.utils.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -42,11 +39,12 @@ public class PcUserController {
     private PcUserMapper pcUserMapper;
 
     @ApiOperation("用户登录")
-    @GetMapping("/login")
-    public Map<String,Object> login(PcUser user){
+    @PostMapping("/login")
+    public ResultResponse login(@RequestBody PcUser user){
         log.info("用户名:"+user.getUsername());
         log.info("密码:"+user.getPassword());
 
+        ResultResponse res = null;
         Map<String,Object> map = new HashMap<>();
         try {
             PcUser userDB = pcUserService.login(user);
@@ -56,25 +54,31 @@ public class PcUserController {
 
             //生成JWT令牌机制
             String token = PCJwtUtils.getToken(playload);
-            map.put("state",true);
-            map.put("msg","登录成功");
-            map.put("token",token);
-        } catch (Exception e) {
-            map.put("state",false);
-            map.put("msg",e.getMessage());
-        }
-        return map;
-    }
 
-    @ApiOperation("增加一条用户信息")
-    @PostMapping("/add")
-    public ResultResponse create(@RequestBody PcUser user){
-        ResultResponse res = null;
-        int id = RandomUtil.randomInt(10000);
-        pcUserMapper.insert(user);
-        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, user);
+//            map.put("state",true);
+//            map.put("code",20000);
+//            map.put("message","登录成功");
+            map.put("token",token);
+            map.put("username",user.getUsername());
+            map.put("state",1);
+            res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, map);
+        } catch (Exception e) {
+//            map.put("state",false);
+            map.put("message",e.getMessage());
+            res = new ResultResponse(Constants.STATUS_FALL, Constants.MESSAGE_FALL, map);
+        }
         return res;
     }
+//
+//    @ApiOperation("增加一条用户信息")
+//    @PostMapping("/add")
+//    public ResultResponse create(@RequestBody PcUser user){
+//        ResultResponse res = null;
+//        int id = RandomUtil.randomInt(10000);
+//        pcUserMapper.insert(user);
+//        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, user);
+//        return res;
+//    }
 
 
     @ApiOperation("根据id删除一条用户数据")
