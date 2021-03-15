@@ -22,11 +22,11 @@ public class JWTInterceptor implements HandlerInterceptor {
         Map<String,Object> map = new HashMap<>();
 
         //获取请求头中的令牌
-        String token = request.getHeader("token");
+        String token = request.getHeader("Authorization" );
         //验证token
         try {
             //验证令牌
-            DecodedJWT verify = PCJwtUtils.verify(token);
+            PCJwtUtils.verify(token);
             //放行
             return true;
             //通过
