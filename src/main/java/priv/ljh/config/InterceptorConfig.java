@@ -15,7 +15,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new JWTInterceptor())
                 //设置拦截的路劲  其他接口保护
-                .addPathPatterns("/pcuser/**")
+                //.addPathPatterns("**")
                 //排除用户相关的路径  放行所有用户请求
                 .excludePathPatterns("/pcuser/login")
                 .excludePathPatterns("/pcuser/add");

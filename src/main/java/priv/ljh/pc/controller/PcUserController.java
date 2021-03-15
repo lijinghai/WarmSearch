@@ -2,6 +2,7 @@ package priv.ljh.pc.controller;
 
 
 import cn.hutool.core.util.RandomUtil;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -14,6 +15,8 @@ import priv.ljh.pc.mapper.PcUserMapper;
 import priv.ljh.pc.service.PcUserService;
 import priv.ljh.utils.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +41,7 @@ public class PcUserController {
     @Autowired
     private PcUserMapper pcUserMapper;
 
-    @ApiOperation("用户登录")
+    @ApiOperation("用户登录,用户登录时的第一道关卡")
     @PostMapping("/login")
     public ResultResponse login(@RequestBody PcUser user){
         log.info("用户名:"+user.getUsername());
@@ -69,7 +72,42 @@ public class PcUserController {
         }
         return res;
     }
-//
+
+    @ApiOperation("验证用户是否登录，用户登录的第二道关卡")
+    @PostMapping("/validate")
+    public ResultResponse validate(HttpServletRequest request){
+
+//        @RequestParam("token") String token,
+//        HttpServletRequest request
+        Map<String,Object> map = new HashMap<>();
+        ResultResponse res = null;
+        //验证Token的合法性
+        String token = request.getHeader("Authorization");
+        DecodedJWT verify = PCJwtUtils.verify(token);
+        //验证成功则获取用户名
+        map.put("username",verify.getClaim("name").asString());
+        map.put("state",1);
+        log.info("登录成功");
+        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, map);
+
+
+
+//        if(verify != null) {
+//            //验证成功则获取用户名
+//            String username = verify.getClaim("username").asString();
+//            map.put("username",username);
+//            map.put("state",1);
+//            log.info("message","登录成功");
+//            res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, map);
+//        } else {
+//            map.put("message","用户未登录");
+//            log.info("message","用户未登录");
+//            res = new ResultResponse(Constants.STATUS_FALL, Constants.MESSAGE_FALL, map);
+//        }
+        return res;
+    }
+
+
 //    @ApiOperation("增加一条用户信息")
 //    @PostMapping("/add")
 //    public ResultResponse create(@RequestBody PcUser user){
