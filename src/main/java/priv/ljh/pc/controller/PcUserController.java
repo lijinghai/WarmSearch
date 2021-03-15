@@ -85,6 +85,8 @@ public class PcUserController {
         String token = request.getHeader("Authorization");
         DecodedJWT verify = PCJwtUtils.verify(token);
         //验证成功则获取用户名
+//        map.put("id",verify.getClaim("id").asInt());
+
         map.put("username",verify.getClaim("name").asString());
         map.put("state",1);
         log.info("登录成功");
@@ -108,15 +110,15 @@ public class PcUserController {
     }
 
 
-//    @ApiOperation("增加一条用户信息")
-//    @PostMapping("/add")
-//    public ResultResponse create(@RequestBody PcUser user){
-//        ResultResponse res = null;
-//        int id = RandomUtil.randomInt(10000);
-//        pcUserMapper.insert(user);
-//        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, user);
-//        return res;
-//    }
+    @ApiOperation("增加一条用户信息")
+    @PostMapping("/add")
+    public ResultResponse create(@RequestBody PcUser user){
+        ResultResponse res = null;
+        int id = RandomUtil.randomInt(10000);
+        pcUserMapper.insert(user);
+        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, user);
+        return res;
+    }
 
 
     @ApiOperation("根据id删除一条用户数据")
