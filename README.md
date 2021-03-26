@@ -18,13 +18,13 @@
 
 > #### 如果您觉得这项目还不错，可以在右上角`Star`支持一下，万分感谢！！！
 
-![img](README.assets/0E503FDA-1616779508411.gif)
+![img](README.assets/0E503FDA.gif)
 
 ## 项目简介
 
 - 本项目前后端分离，前端基于`Vue`+`Vue-router`+`Vuex`+`Element-ui`+`Axios`，参考锤子商城实现。后端基于SpringBoot(框架) + JSON WEB TOKEN(令牌机制) + MybatisPlus + Mysql实现。
 
-- 总体架构![img](README.assets/clip_image002-1616779508411.jpg)
+- 总体架构![img](README.assets/clip_image002.jpg)
 
   系统设计秉承“前后端分离/SOA”的总体思想，前端使用Vue/ElementUI作为主要框架技术、Nginx作为HTTP服务器，用来提供静态页面访问服务和反向代理作用；后端则以Springboot主流框架技术为主、采用MySQL开源数据库，前后端使用Restful规范交换数据。 
 
