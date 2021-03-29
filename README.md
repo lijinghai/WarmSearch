@@ -6,6 +6,8 @@
 
 ##### 这是我的邮箱lijinghailjh@163.com,欢迎大家来指正
 
+##### 最新代码将在[GitHub](https://github.com/Dorian1015)上持续更新
+
 
 
 
@@ -14,7 +16,7 @@
 
 > 本项目前后端分离，前端(WarmSearch-PC）[参考锤子商城](https://www.smartisan.com/)
 
-> 这是本项目的前台源码，后端源码请看WarmSearch,本项目包括后台管理系统(WarmSearch-Web)，前台系统（WarmSearch-PC)，微信小程序部分（WarmSearch-uni-app)
+> 这是本项目的前台源码，后端源码请看[WarmSearch](https://github.com/Dorian1015/WarmSearch),本项目包括后台管理系统([WarmSearch-Web](https://github.com/Dorian1015/WarmSearch-Web))，前台系统（[WarmSearch-PC](https://github.com/Dorian1015/WarmSearch-PC))，微信小程序部分（[WarmSearch-uniapp](https://github.com/Dorian1015/WarmSearch-uniapp))
 
 > #### 如果您觉得这项目还不错，可以在右上角`Star`支持一下，万分感谢！！！
 
