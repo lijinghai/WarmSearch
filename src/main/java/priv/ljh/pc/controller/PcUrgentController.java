@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.multipart.MultipartFile;
-import priv.ljh.pc.entity.PcRecent;
 import priv.ljh.pc.entity.PcUrgent;
 import priv.ljh.pc.mapper.PcUrgentMapper;
 import priv.ljh.pc.service.PcUrgentService;
