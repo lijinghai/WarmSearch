@@ -43,10 +43,6 @@ public class PcUrgent implements Serializable {
     @ApiModelProperty(value = "类型")
     private Integer type;
 
-    @ApiModelProperty(value = "物品id")
-    @TableField("goodsId")
-    private Integer goodsId;
-
     @ApiModelProperty(value = "图片地址")
     private String url;
 

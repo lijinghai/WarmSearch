@@ -113,7 +113,7 @@ public class PcUrgentController {
 
     @ApiOperation("根据goodsid查询所有PC端急需物品信息")
     @GetMapping("/goodsid")
-    public ResultResponse queryPcCarousel(@RequestParam("goodsId") Integer goodsId,@RequestParam("page") int pageNo, @RequestParam("limit") int limit, @RequestParam("sort") String idSort){
+    public ResultResponse queryPcCarousel(@RequestParam("id") Integer goodsId,@RequestParam("page") int pageNo, @RequestParam("limit") int limit, @RequestParam("sort") String idSort){
         ResultResponse res = null;
         List<Map> pcUrgent = pcUrgentMapper.getUrgentId(goodsId);
         log.info("pcUrgent====>"+pcUrgent);
