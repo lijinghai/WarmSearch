@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.multipart.MultipartFile;
 import priv.ljh.pc.entity.PcCarousel;
+import priv.ljh.pc.entity.PcGoodsdetail;
 import priv.ljh.pc.entity.PcRecent;
 import priv.ljh.pc.mapper.PcCarouselMapper;
 import priv.ljh.pc.mapper.PcRecentMapper;
@@ -45,6 +46,16 @@ public class PcRecentController {
 
     @Autowired
     private PcRecentService pcRecentService;
+
+    @ApiOperation("增加一条信息")
+    @PostMapping("/all")
+    public ResultResponse create(@RequestBody PcRecent pcRecent){
+        ResultResponse res = null;
+        int id = RandomUtil.randomInt(10000);
+        pcRecentMapper.insert(pcRecent);
+        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, pcRecent);
+        return res;
+    }
 
     @ApiOperation("增加一条PC端最新信息")
     @PostMapping
