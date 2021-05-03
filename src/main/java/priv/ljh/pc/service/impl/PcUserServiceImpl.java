@@ -1,7 +1,6 @@
 package priv.ljh.pc.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import priv.ljh.operate.entity.User;
 import priv.ljh.pc.entity.PcUser;
 import priv.ljh.pc.mapper.PcUserMapper;
 import priv.ljh.pc.service.PcUserService;

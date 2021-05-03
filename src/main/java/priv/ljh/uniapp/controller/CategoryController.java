@@ -8,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import priv.ljh.operate.entity.User;
 import priv.ljh.uniapp.entity.Category;
 import priv.ljh.uniapp.mapper.CategoryMapper;
 import priv.ljh.uniapp.mapper.GoodsDetailMapper;

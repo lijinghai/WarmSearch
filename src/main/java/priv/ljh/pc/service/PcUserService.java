@@ -1,7 +1,6 @@
 package priv.ljh.pc.service;
 
 import org.springframework.stereotype.Service;
-import priv.ljh.operate.entity.User;
 import priv.ljh.pc.entity.PcUser;
 import com.baomidou.mybatisplus.extension.service.IService;
 import priv.ljh.utils.MyPage;

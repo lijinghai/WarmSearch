@@ -14,18 +14,12 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import priv.ljh.operate.entity.User;
-import priv.ljh.operate.mapper.UserMapper;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 @SpringBootTest
 class WarmSearchApplicationTests {
-    @Autowired
-    private UserMapper userMapper;
+
 
     @Test
     void contextLoads() {
@@ -76,7 +70,7 @@ class WarmSearchApplicationTests {
         //4、策略配置
         StrategyConfig strategy = new StrategyConfig();
         // 设置要映射的表名
-        strategy.setInclude("user","teacher","log","electronic");
+        strategy.setInclude("log");
 
         // 设置要映射的表名
         //包的名字下划线转驼峰命名

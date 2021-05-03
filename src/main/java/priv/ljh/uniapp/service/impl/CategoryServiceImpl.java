@@ -1,6 +1,5 @@
 package priv.ljh.uniapp.service.impl;
 
-import priv.ljh.operate.entity.User;
 import priv.ljh.uniapp.entity.Category;
 import priv.ljh.uniapp.mapper.CategoryMapper;
 import priv.ljh.uniapp.service.CategoryService;
