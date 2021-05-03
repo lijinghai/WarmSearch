@@ -52,7 +52,7 @@ public class Goodsfirst implements Serializable {
     private String status;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @ApiModelProperty(value = "发布时间")
     @TableField(fill = FieldFill.INSERT)
     private Date createTime;
