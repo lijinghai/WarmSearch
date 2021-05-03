@@ -2,7 +2,6 @@ package priv.ljh.operate.service;
 
 import priv.ljh.operate.entity.Log;
 import com.baomidou.mybatisplus.extension.service.IService;
-import priv.ljh.operate.entity.User;
 import priv.ljh.utils.MyPage;
 
 import java.util.List;

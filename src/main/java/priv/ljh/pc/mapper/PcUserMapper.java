@@ -4,7 +4,6 @@ import io.swagger.annotations.ApiModel;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
-import priv.ljh.operate.entity.User;
 import priv.ljh.pc.entity.PcUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 

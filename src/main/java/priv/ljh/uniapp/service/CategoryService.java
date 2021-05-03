@@ -1,6 +1,5 @@
 package priv.ljh.uniapp.service;
 
-import priv.ljh.operate.entity.User;
 import priv.ljh.uniapp.entity.Category;
 import com.baomidou.mybatisplus.extension.service.IService;
 import priv.ljh.utils.MyPage;

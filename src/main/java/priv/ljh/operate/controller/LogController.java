@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import priv.ljh.operate.entity.Log;
-import priv.ljh.operate.entity.User;
 import priv.ljh.operate.mapper.LogMapper;
 import priv.ljh.operate.service.LogService;
 import priv.ljh.utils.Constants;

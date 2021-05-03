@@ -1,7 +1,6 @@
 package priv.ljh.operate.service.impl;
 
 import priv.ljh.operate.entity.Log;
-import priv.ljh.operate.entity.User;
 import priv.ljh.operate.mapper.LogMapper;
 import priv.ljh.operate.service.LogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
