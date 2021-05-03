@@ -4,7 +4,9 @@ test/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-!*test/java/priv/ljh
+!*test/java/priv/ljh/
+!*test/java/priv/ljh/WarmSearchApplicationTests
+!*D:\Desktop\大创\Code\black\WarmSearch\src\test\java\priv\ljh
 
 ### STS ###
 .apt_generated
