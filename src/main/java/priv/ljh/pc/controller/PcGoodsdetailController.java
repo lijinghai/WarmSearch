@@ -43,7 +43,7 @@ public class PcGoodsdetailController {
     @Autowired
     private PcGoodsdetailService pcGoodsdetailService;
 
-    @ApiOperation("增加一条用户信息")
+    @ApiOperation("增加一条信息")
     @PostMapping("/all")
     public ResultResponse create(@RequestBody PcGoodsdetail pcGoodsdetail){
         ResultResponse res = null;

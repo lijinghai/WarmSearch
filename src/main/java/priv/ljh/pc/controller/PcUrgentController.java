@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.multipart.MultipartFile;
+import priv.ljh.pc.entity.PcGoodsdetail;
 import priv.ljh.pc.entity.PcUrgent;
 import priv.ljh.pc.mapper.PcUrgentMapper;
 import priv.ljh.pc.service.PcUrgentService;
@@ -43,6 +44,16 @@ public class PcUrgentController {
 
     @Autowired
     private PcUrgentService pcUrgentService;
+
+    @ApiOperation("增加一条信息")
+    @PostMapping("/all")
+    public ResultResponse create(@RequestBody PcUrgent pcUrgent){
+        ResultResponse res = null;
+        int id = RandomUtil.randomInt(10000);
+        pcUrgentMapper.insert(pcUrgent);
+        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, pcUrgent);
+        return res;
+    }
 
     @ApiOperation("增加一条PC端急需物品信息")
     @PostMapping
