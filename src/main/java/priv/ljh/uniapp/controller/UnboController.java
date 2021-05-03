@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.multipart.MultipartFile;
+import priv.ljh.pc.entity.PcGoodsdetail;
 import priv.ljh.uniapp.entity.Unbo;
 import priv.ljh.uniapp.mapper.UnboMapper;
 import priv.ljh.uniapp.service.UnboService;
@@ -39,6 +40,16 @@ public class UnboController {
 
     @Autowired
     private UnboService unboService;
+
+    @ApiOperation("增加一条信息")
+    @PostMapping("/all")
+    public ResultResponse create(@RequestBody Unbo unbo){
+        ResultResponse res = null;
+        int id = RandomUtil.randomInt(10000);
+        unboMapper.insert(unbo);
+        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, unbo);
+        return res;
+    }
 
     @ApiOperation("增加一条轮播图信息")
     @PostMapping
