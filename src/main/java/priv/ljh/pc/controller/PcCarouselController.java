@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.multipart.MultipartFile;
 import priv.ljh.pc.entity.PcCarousel;
+import priv.ljh.pc.entity.PcGoodsdetail;
 import priv.ljh.pc.mapper.PcCarouselMapper;
 import priv.ljh.pc.service.PcCarouselService;
 import priv.ljh.uniapp.entity.Unbo;
@@ -43,6 +44,16 @@ public class PcCarouselController {
 
     @Autowired
     private PcCarouselService pcCarouselService;
+
+    @ApiOperation("增加一条信息")
+    @PostMapping("/all")
+    public ResultResponse create(@RequestBody PcCarousel pcCarousel){
+        ResultResponse res = null;
+        int id = RandomUtil.randomInt(10000);
+        pcCarouselMapper.insert(pcCarousel);
+        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, pcCarousel);
+        return res;
+    }
 
     @ApiOperation("增加一条轮播图信息")
     @PostMapping
