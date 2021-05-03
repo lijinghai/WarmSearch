@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.multipart.MultipartFile;
+import priv.ljh.pc.entity.PcGoodsdetail;
 import priv.ljh.uniapp.entity.Goodsfirst;
 import priv.ljh.uniapp.entity.Unbo;
 import priv.ljh.uniapp.mapper.GoodsfirstMapper;
@@ -44,6 +45,16 @@ public class GoodsfirstController {
 
     @Autowired
     private GoodsfirstService goodsfirstService;
+
+    @ApiOperation("增加一条信息")
+    @PostMapping("/all")
+    public ResultResponse create(@RequestBody Goodsfirst goodsfirst){
+        ResultResponse res = null;
+        int id = RandomUtil.randomInt(10000);
+        goodsfirstMapper.insert(goodsfirst);
+        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, goodsfirst);
+        return res;
+    }
 
     @ApiOperation("增加一条首页展示的物品信息信息")
     @PostMapping
