@@ -36,17 +36,6 @@ public class PcCarousel implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "索引")
-    @TableField("panelId")
-    private Integer panelId;
-
-    @ApiModelProperty(value = "类型")
-    private Integer type;
-
-    @ApiModelProperty(value = "物品id")
-    @TableField("goodsId")
-    private Integer goodsId;
-
     @ApiModelProperty(value = "图片地址")
     private String url;
 
@@ -60,15 +49,6 @@ public class PcCarousel implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd")
     @ApiModelProperty(value = "更新时间")
     private Date updatedTime;
-
-    @ApiModelProperty(value = "物品名称")
-    private String goodsName;
-
-    @ApiModelProperty(value = "物品详情描述")
-    private String goodsDetail;
-
-    @ApiModelProperty(value = "物品状态")
-    private String status;
 
 
 }
