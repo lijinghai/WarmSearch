@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.multipart.MultipartFile;
+import priv.ljh.pc.entity.PcGoodsdetail;
 import priv.ljh.uniapp.entity.SFind;
 import priv.ljh.uniapp.entity.Unbo;
 import priv.ljh.uniapp.mapper.SFindMapper;
@@ -44,6 +45,16 @@ public class SFindController {
 
     @Autowired
     private SFindMapper sFindMapper;
+
+    @ApiOperation("增加一条信息")
+    @PostMapping("/all")
+    public ResultResponse create(@RequestBody SFind sFind){
+        ResultResponse res = null;
+        int id = RandomUtil.randomInt(10000);
+        sFindMapper.insert(sFind);
+        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, sFind);
+        return res;
+    }
 
     @ApiOperation("增加一条招领信息表信息")
     @PostMapping
