@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.multipart.MultipartFile;
+import priv.ljh.pc.entity.PcGoodsdetail;
 import priv.ljh.uniapp.entity.FindList;
 import priv.ljh.uniapp.entity.Goodsfirst;
 import priv.ljh.uniapp.entity.SFind;
@@ -45,6 +46,15 @@ public class FindListController {
 
     @Autowired
     private FindListService findListService;
+    @ApiOperation("增加一条信息")
+    @PostMapping("/all")
+    public ResultResponse create(@RequestBody FindList findList){
+        ResultResponse res = null;
+        int id = RandomUtil.randomInt(10000);
+        findListMapper.insert(findList);
+        res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK, findList);
+        return res;
+    }
 
     @ApiOperation("增加一条待招领物品详情表信息")
     @PostMapping
