@@ -7,6 +7,10 @@ test/
 !*test/java/priv/ljh/
 !*test/java/priv/ljh/WarmSearchApplicationTests
 !*D:\Desktop\大创\Code\black\WarmSearch\src\test\java\priv\ljh
+WarmSearchApplicationTests
+*test/*
+/.idea
+
 
 ### STS ###
 .apt_generated
