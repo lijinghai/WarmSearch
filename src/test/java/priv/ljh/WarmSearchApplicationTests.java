@@ -24,7 +24,7 @@ class WarmSearchApplicationTests {
     @Test
     void contextLoads() {
 
-        // 需要构建一个 代码自动生成器的对象
+        // 需要构建一个 代码自动生成器 对象
         AutoGenerator mpg = new AutoGenerator();
 
         // 配置策略
