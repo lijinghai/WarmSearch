@@ -13,10 +13,6 @@
 		<img src="https://img.shields.io/github/stars/Dorian1015/WarmSearch"
 			 alt="Status">
 	</a>
-    <a href="https://github.com/Dorian1015/WarmSearch">
-		<img src="	https://img.shields.io/github/license/Dorian1015/WarmSearch"
-			 alt="Status">
-	</a>
 </p>
 
 <p align="center">
@@ -173,6 +169,17 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 ### 如果你觉得我的项目，还不错，可以给我一下赞赏，本人现是一名大二学生，打算不断完善这个项目，所以我打算购买服务器，并部署上去；开源不易，如果你喜欢我的项目，可以给我投资一下我的服务器基金，苦逼大学生，万分感谢您！！！！
 
 
+
+
+
+
 ### 如果你能看到这里说明你肯定对我的项目感兴趣，那么请访问我的博客吧，里面会更新更详细的关于我这个项目的信息 [博客](https://dorian1015.github.io/)
 
-### 或者你也可以通过Github首页的邮箱来联系我
+### 或者你也可以通过Github首页的邮箱来联系我 lijinghailjh@163.com
+
+
+
+
+
+
+
