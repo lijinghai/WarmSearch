@@ -55,7 +55,7 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 主要还是因为穷，买不起服务器
 
-演示视频：[在线演示视频]()
+演示视频：[在线演示视频](https://www.bilibili.com/video/BV1f54y1j7sG)
 
 ## 前言：
 
