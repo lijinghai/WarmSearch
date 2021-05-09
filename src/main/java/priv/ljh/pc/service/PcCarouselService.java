@@ -2,7 +2,6 @@ package priv.ljh.pc.service;
 
 import priv.ljh.pc.entity.PcCarousel;
 import com.baomidou.mybatisplus.extension.service.IService;
-import priv.ljh.uniapp.entity.Unbo;
 import priv.ljh.utils.MyPage;
 
 import java.util.List;

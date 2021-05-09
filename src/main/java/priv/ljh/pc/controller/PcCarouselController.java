@@ -10,10 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.multipart.MultipartFile;
 import priv.ljh.pc.entity.PcCarousel;
-import priv.ljh.pc.entity.PcGoodsdetail;
 import priv.ljh.pc.mapper.PcCarouselMapper;
 import priv.ljh.pc.service.PcCarouselService;
-import priv.ljh.uniapp.entity.Unbo;
 import priv.ljh.utils.Constants;
 import priv.ljh.utils.MyPage;
 import priv.ljh.utils.ResultResponse;
