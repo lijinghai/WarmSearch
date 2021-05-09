@@ -5,7 +5,6 @@ import priv.ljh.pc.mapper.PcGoodsdetailMapper;
 import priv.ljh.pc.service.PcGoodsdetailService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
-import priv.ljh.uniapp.entity.GoodsDetail;
 import priv.ljh.utils.MyPage;
 
 import java.util.ArrayList;
