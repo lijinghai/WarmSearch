@@ -171,7 +171,7 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 ### 如果你能看到这里说明你肯定对我的项目感兴趣，那么请访问我的博客吧，里面会更新更详细的关于我这个项目的信息 [博客](https://dorian1015.github.io/)
 
-### 或者你也可以通过Github首页的邮箱来联系我 lijinghailjh@163.com
+### 或者你也可以通过我的[Github](https://github.com/Dorian1015) 首页的邮箱来联系我 lijinghailjh@163.com
 
 
 
