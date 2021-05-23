@@ -71,7 +71,7 @@ class WarmSearchApplicationTests {
         //4、策略配置
         StrategyConfig strategy = new StrategyConfig();
         // 设置要映射的表名
-        strategy.setInclude("log");
+        strategy.setInclude("");
 
         // 设置要映射的表名
         //包的名字下划线转驼峰命名
