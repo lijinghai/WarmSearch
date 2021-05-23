@@ -8,14 +8,11 @@ import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
-import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * <p>
@@ -23,7 +20,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  * </p>
  *
  * @author lijinghai
- * @since 2021-01-29
+ * @since 2021-05-23
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -53,8 +50,6 @@ public class Log implements Serializable {
     @ApiModelProperty(value = "浏览器")
     private String browser;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value = "创建时间")
     @TableField(fill = FieldFill.INSERT)
     private Date createTime;
