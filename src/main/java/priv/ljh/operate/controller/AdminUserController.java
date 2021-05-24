@@ -79,7 +79,8 @@ public class AdminUserController {
             /*AdminUser adminUser = this.adminUserService.searchUserByUserName(name);*/
             //封装用户信息
             AdminUserInfo info = new AdminUserInfo();
-            info.setAvatar("https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif");
+            info.setAvatar("https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/custom/tuxiang.jpg");
+//            info.setAvatar("https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif");
             info.setIntroduction("测试用户");
             info.setName(name);
             List<String> roles = Arrays.asList("admin");
