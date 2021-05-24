@@ -152,9 +152,15 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 #### 3.后台管理系统(WarmSearch-web)
 
-- #### 部分页面展示
+- #### 登录页面展示
 
 ![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/image-20210327003533589.png)
+
+- #### 首页页面展示
+
+![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/后台首页.jpg)
+
+- #### 部分功能页面展示
 
 ![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/后端页面.png)
 
