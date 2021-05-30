@@ -142,6 +142,10 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 #### 2.微信小程序页面(WarmSearch-uniapp)
 
+- #### 登录页面
+
+![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/微信登录页.png)
+
 - #### 首页部分页面展示
 
 ![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/image-20210327002845431.png)
