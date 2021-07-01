@@ -30,7 +30,7 @@ spring:
 
 #mybatis plus 设置
 mybatis-plus:
-  mapper-locations: classpath*:org/jeecg/modules/**/xml/*Mapper.xml
+#  mapper-locations: classpath*:org/jeecg/modules/**/xml/*Mapper.xml
   global-config:
     # 关闭MP3.0自带的banner
     banner: false
@@ -45,16 +45,16 @@ mybatis-plus:
     # 返回类型为Map,显示null对应的字段
     call-setters-on-nulls: true
 
+#Mybatis输出sql日志
+logging:
+  level:
+    org.jeecg.modules.system.mapper: debug
+
 #设置文件的大小
   servlet:
     multipart:
       max-file-size: 1024MB
       max-request-size: 1024MB
-
-#Mybatis输出sql日志
-logging:
-  level:
-    org.jeecg.modules.system.mapper: debug
 
 #enable swagger
 swagger:

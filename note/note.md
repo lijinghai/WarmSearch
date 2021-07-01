@@ -1,3 +1,4 @@
+```java
 /*    @Test
 public void insertUser(){
 User user = new User();
@@ -34,3 +35,131 @@ userMapper.insert(user);
         List<User> users = userMapper.selectList(null);
         System.out.println(users);
     }*/
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+	<!--定义日志文件的存储地址 -->
+	<property name="LOG_HOME" value="../logs" />
+
+	<!--<property name="COLOR_PATTERN" value="%black(%contextName-) %red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta( %replace(%caller{1}){'\t|Caller.{1}0|\r\n', ''})- %gray(%msg%xEx%n)" />-->
+	<!-- 控制台输出 -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}:%L - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 按照每天生成日志文件 -->
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<!--日志文件输出的文件名 -->
+			<FileNamePattern>${LOG_HOME}/jeecgboot-%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+			<!--日志文件保留天数 -->
+			<MaxHistory>30</MaxHistory>
+			<maxFileSize>20MB</maxFileSize>
+		</rollingPolicy>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}:%L - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 生成 error html格式日志开始 -->
+	<appender name="HTML" class="ch.qos.logback.core.FileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<!--设置日志级别,过滤掉info日志,只输入error日志-->
+			<level>ERROR</level>
+		</filter>
+		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+			<layout class="ch.qos.logback.classic.html.HTMLLayout">
+				<pattern>%p%d%msg%M%F{32}%L</pattern>
+			</layout>
+		</encoder>
+		<file>${LOG_HOME}/error-log.html</file>
+	</appender>
+	<!-- 生成 error html格式日志结束 -->
+
+	<!-- 每天生成一个html格式的日志开始 -->
+	<appender name="FILE_HTML" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<!--日志文件输出的文件名 -->
+			<FileNamePattern>${LOG_HOME}/jeecgboot-%d{yyyy-MM-dd}.%i.html</FileNamePattern>
+			<!--日志文件保留天数 -->
+			<MaxHistory>30</MaxHistory>
+			<MaxFileSize>10MB</MaxFileSize>
+		</rollingPolicy>
+		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+			<layout class="ch.qos.logback.classic.html.HTMLLayout">
+				<pattern>%p%d%msg%M%F{32}%L</pattern>
+			</layout>
+		</encoder>
+	</appender>
+	<!-- 每天生成一个html格式的日志结束 -->
+
+	<!--myibatis log configure -->
+	<logger name="com.apache.ibatis" level="TRACE" />
+	<logger name="java.sql.Connection" level="DEBUG" />
+	<logger name="java.sql.Statement" level="DEBUG" />
+	<logger name="java.sql.PreparedStatement" level="DEBUG" />
+
+	<!-- 日志输出级别 -->
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+		<appender-ref ref="HTML" />
+		<appender-ref ref="FILE_HTML" />
+	</root>
+
+</configuration>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds" debug="false">
+    <contextName>lijinghai</contextName>
+    <property name="log.charset" value="utf-8" />
+    <property name="log.pattern" value="%contextName- %red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger{36}) - %msg%n" />
+
+    <!--输出到控制台-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${log.pattern}</pattern>
+            <charset>${log.charset}</charset>
+        </encoder>
+    </appender>
+
+    <!--普通日志输出到控制台-->
+    <root level="info">
+        <appender-ref ref="console" />
+    </root>
+
+    <!--监控sql日志输出 -->
+    <logger name="jdbc.sqlonly" level="INFO" additivity="false">
+        <appender-ref ref="console" />
+    </logger>
+
+    <logger name="jdbc.resultset" level="ERROR" additivity="false">
+        <appender-ref ref="console" />
+    </logger>
+
+    <!--  如想看到表格数据，将OFF改为INFO  -->
+    <logger name="jdbc.resultsettable" level="OFF" additivity="false">
+        <appender-ref ref="console" />
+    </logger>
+
+    <logger name="jdbc.connection" level="OFF" additivity="false">
+        <appender-ref ref="console" />
+    </logger>
+
+    <logger name="jdbc.sqltiming" level="OFF" additivity="false">
+        <appender-ref ref="console" />
+    </logger>
+
+    <logger name="jdbc.audit" level="OFF" additivity="false">
+        <appender-ref ref="console" />
+    </logger>
+</configuration>
+```
