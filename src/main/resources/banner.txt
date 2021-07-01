@@ -8,9 +8,9 @@
                  \____/             ( ( __))
      ${AnsiColor.BRIGHT_GREEN}
      :: Spring Boot ::       (v2.4.2.RELEASE)
-
+     ${AnsiColor.BRIGHT_YELLOW}
       my Email : lijinghailjh@163.com
 
     ( ͡° ͜ʖ ͡°)✧ **********************************************************************
 
-    ${AnsiColor.BRIGHT_BLUE}
+

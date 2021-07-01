@@ -1,0 +1,105 @@
+spring:
+  datasource:
+    username: root
+    password: 101599
+    url: jdbc:mysql://localhost:3306/search?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    #Spring Boot 默认是不注入这些属性值的，需要自己绑定
+    #druid 数据源专有配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+
+    #配置监控统计拦截的filters，stat:监控统计、log4j：日志记录、wall：防御sql注入
+    #如果允许时报错  java.lang.ClassNotFoundException: org.apache.log4j.Priority
+    #则导入 log4j 依赖即可，Maven 地址：https://mvnrepository.com/artifact/log4j/log4j
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+  #json 时间戳统一转换
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  aop:
+    proxy-target-class: true
+  activiti:
+    check-process-definitions: false
+    #启用作业执行器
+    async-executor-activate: false
+    #启用异步执行器
+    job-executor-activate: false
+  jpa:
+    open-in-view: false
+  #配置freemarker
+  freemarker:
+    # 设置模板后缀名
+    suffix: .ftl
+    # 设置文档类型
+    content-type: text/html
+    # 设置页面编码格式
+    charset: UTF-8
+    # 设置页面缓存
+    cache: false
+    prefer-file-system-access: false
+    # 设置ftl文件路径
+    template-loader-path:
+      - classpath:/templates
+  # 设置静态文件路径，js,css等
+  mvc:
+    static-path-pattern: /**
+  resource:
+    static-locations: classpath:/static/,classpath:/public/
+
+#mybatis plus 设置
+mybatis-plus:
+  mapper-locations: classpath*:org/jeecg/modules/**/xml/*Mapper.xml
+  global-config:
+    # 关闭MP3.0自带的banner
+    banner: false
+    db-config:
+      #主键类型  0:"数据库ID自增",1:"该类型为未设置主键类型", 2:"用户输入ID",3:"全局唯一ID (数字类型唯一ID)", 4:"全局唯一ID UUID",5:"字符串全局唯一ID (idWorker 的字符串表示)";
+      id-type: 4
+      # 默认数据库表下划线命名
+      table-underline: true
+  configuration:
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 返回类型为Map,显示null对应的字段
+    call-setters-on-nulls: true
+
+  #设置文件的大小
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+
+#Mybatis输出sql日志
+logging:
+  level:
+    org.jeecg.modules.system.mapper: debug
+
+#enable swagger
+swagger:
+  enable: true
+
+# 跨域问题
+allowed:
+  origin: http://localhost:8090
+
+allowed1:
+  origin1: http://localhost:8080
+
+allowed2:
+  origin2: http://localhost:8093
