@@ -11,12 +11,14 @@
     <groupId>priv.ljh</groupId>
     <artifactId>warmsearch</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>warmsearch</name>
-    <description>Demo project for Spring Boot</description>
+    <name>lijinghai_warmsearch</name>
+    <description>lijinghai`s project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
-    <packaging>war</packaging>
+
+    <!--打jar包-->
+    <packaging>jar</packaging>
 
 
     <dependencies>
