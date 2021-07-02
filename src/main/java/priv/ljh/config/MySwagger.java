@@ -1,13 +1,19 @@
 package priv.ljh.config;
 import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import com.google.common.base.Predicates;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.Profiles;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.ApiKey;
 import springfox.documentation.service.Contact;
+import springfox.documentation.service.SecurityScheme;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -15,20 +21,35 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.util.ArrayList;
 
 /**
- * swagger
+ * swagger 配置类
  * @author lijinghai
  * @Date 2021-1-19
  */
 
+@Slf4j
 @Configuration
 @EnableSwagger2
 @EnableSwaggerBootstrapUI
-public class MySwagger {
+@ConditionalOnProperty(name = "swagger.enable", havingValue = "true")
+public class MySwagger implements WebMvcConfigurer {
+
+    /**
+     * 显示swagger-ui.html文档展示页，还必须注入swagger资源：
+     *
+     * @param registry 资源处理器注册
+     */
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("doc.html").addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+    }
 
     /**
      * https://localhost:8080/swagger-ui.html
      * https://localhost:8080/doc.html
      * 配置了Swagger的Docket的Bean实例
+     * swagger2的配置文件，这里可以配置swagger2的一些基本的内容，比如扫描的包等等
      * @return
      */
     @Bean
@@ -69,13 +90,17 @@ public class MySwagger {
                 .build();
     }
 
+
+
+
     /**
      * 配置Swagger信息=apiInfo
+     * api文档的详细信息函数,注意这里的注解引用的是哪个
      * @return
      */
     public ApiInfo apiInfo(){
         //作者信息
-        Contact contact = new Contact("李京海", "http://github.com/Dorian1015", "1503676492@qq.com");
+        Contact contact = new Contact("李京海", "http://github.com/Dorian1015", "lijinghailjh@163.com");
         return new ApiInfo(
                 "李京海的SwaggerAPI文档",
                 "东道若逢相识问，青袍今已误儒生。",
