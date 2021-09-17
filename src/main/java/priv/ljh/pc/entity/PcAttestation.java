@@ -55,7 +55,7 @@ public class PcAttestation implements Serializable {
     private String imgUrl;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(locale = "zh", timezone = "Asia/Shanghai",pattern = "yyyy-MM-dd")
     @ApiModelProperty(value = "认领时间")
     @TableField(fill = FieldFill.INSERT)
     private Date createTime;
