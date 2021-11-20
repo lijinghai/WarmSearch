@@ -2,15 +2,15 @@
 
 <p align="center">
  	<a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/github/issues/lijinghai/WarmSearch"
+		<img src="https://img.shields.io/github/issues/Dorian1015/WarmSearch"
 			 alt="Version">
 	</a>
  	<a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/github/forks/lijinghailjh/WarmSearch"
+		<img src="https://img.shields.io/github/forks/Dorian1015/WarmSearch"
 			 alt="Status">
 	</a>
     <a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/github/stars/lijinghai/WarmSearch"
+		<img src="https://img.shields.io/github/stars/Dorian1015/WarmSearch"
 			 alt="Status">
 	</a>
 </p>
