@@ -1,4 +1,4 @@
-<h1 align="center"> 校园失物招领网站 | 何逢君ljh </h1>
+<h1 align="center"> 校园失物招领网站 | 何逢君 </h1>
 
 <p align="center">
  	<a href="https://github.com/lijinghailjh/WarmSearch">
