@@ -1,22 +1,22 @@
 <h1 align="center"> 校园失物招领网站 | Dorian </h1>
 
 <p align="center">
- 	<a href="https://github.com/Dorian1015/WarmSearch">
+ 	<a href="https://github.com/lijinghailjh/WarmSearch">
 		<img src="https://img.shields.io/github/issues/Dorian1015/WarmSearch"
 			 alt="Version">
 	</a>
- 	<a href="https://github.com/Dorian1015/WarmSearch">
+ 	<a href="https://github.com/lijinghailjh/WarmSearch">
 		<img src="https://img.shields.io/github/forks/Dorian1015/WarmSearch"
 			 alt="Status">
 	</a>
-    <a href="https://github.com/Dorian1015/WarmSearch">
+    <a href="https://github.com/lijinghailjh/WarmSearch">
 		<img src="https://img.shields.io/github/stars/Dorian1015/WarmSearch"
 			 alt="Status">
 	</a>
 </p>
 
 <p align="center">
-     <a href="https://github.com/Dorian1015/WarmSearch">
+     <a href="https://github.com/lijinghailjh/WarmSearch">
 		<img src="https://img.shields.io/badge/Dorian-%E6%B5%B7-blue"
 			 alt="Status">
 	</a>
@@ -42,13 +42,13 @@
 
 项目采用前后端分离开发模式，PC端使用:Vue + Element-ui, 小程序使用Uni-app开发，后端数据API采用Java、Spring-Boot开发.
 
-PC端Code地址：https://github.com/Dorian1015/WarmSearch-PC
+PC端Code地址：https://github.com/lijinghailjh/WarmSearch-PC
 
-小程序端code地址：https://github.com/Dorian1015/WarmSearch-uniapp
+小程序端code地址：https://github.com/lijinghailjh/WarmSearch-uniapp
 
-后端code地址：https://github.com/Dorian1015/WarmSearch
+后端code地址：https://github.com/lijinghailjh/WarmSearch
 
-web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
+web管理端code地址: https://github.com/lijinghailjh/WarmSearch-Web
 
 ### 体验地址
 
@@ -64,7 +64,7 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 ##### 这是我的邮箱lijinghailjh@163.com,欢迎大家来指正
 
-##### 最新代码将在[GitHub](https://github.com/Dorian1015)上持续更新
+##### 最新代码将在[GitHub](https://github.com/lijinghailjh)上持续更新
 
 ##### 在读大二学生（2021年5月8日）
 
@@ -76,17 +76,17 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 > 本项目前后端分离，前端(WarmSearch-PC）[参考锤子商城](https://www.smartisan.com/)
 
-> 这是本项目的前台源码，后端源码请看[WarmSearch](https://github.com/Dorian1015/WarmSearch),本项目包括后台管理系统([WarmSearch-Web](https://github.com/Dorian1015/WarmSearch-Web))，前台系统（[WarmSearch-PC](https://github.com/Dorian1015/WarmSearch-PC))，微信小程序部分（[WarmSearch-uniapp](https://github.com/Dorian1015/WarmSearch-uniapp))
+> 这是本项目的前台源码，后端源码请看[WarmSearch](https://github.com/lijinghailjh/WarmSearch),本项目包括后台管理系统([WarmSearch-Web](https://github.com/lijinghailjh/WarmSearch-Web))，前台系统（[WarmSearch-PC](https://github.com/lijinghailjh/WarmSearch-PC))，微信小程序部分（[WarmSearch-uniapp](https://github.com/lijinghailjh/WarmSearch-uniapp))
 
 > #### 如果您觉得这项目还不错，可以在右上角`Star`支持一下，万分感谢！！！
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/0E503FDA.gif)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/0E503FDA.gif)
 
 ## 项目简介
 
 - 本项目前后端分离，前端基于`Vue`+`Vue-router`+`Vuex`+`Element-ui`+`Axios`，参考锤子商城实现。后端基于SpringBoot(框架) + JSON WEB TOKEN(令牌机制) + MybatisPlus + Mysql实现。
 
-- 总体架构![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/clip_image002.jpg)
+- 总体架构![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/clip_image002.jpg)
 
   系统设计秉承“前后端分离/SOA”的总体思想，前端使用Vue/ElementUI作为主要框架技术、Nginx作为HTTP服务器，用来提供静态页面访问服务和反向代理作用；后端则以Springboot主流框架技术为主、采用MySQL开源数据库，前后端使用Restful规范交换数据。
 
@@ -111,32 +111,32 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 - ###### WarmSearch-PC首页部分展示
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/pc首页.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/pc首页.png)
 
 - 物品详情页
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/物品详情页.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/物品详情页.png)
 
 - ###### 寻失物部分页面展示
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/寻物.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/寻物.png)
 
 - #####  认领页面
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/物品详情页2.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/物品详情页2.png)
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/认领页.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/认领页.png)
 
 - ##### 信息发布页面
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/信息发布页.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/信息发布页.png)
 
 - ###### 寻失主部分页面展示
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/image-20210327001747782.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/image-20210327001747782.png)
 
 - ###### 捐赠部分页面展示
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/image-20210327001838330.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/image-20210327001838330.png)
 
 
 
@@ -144,29 +144,29 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 - #### 登录页面
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/微信登录页.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/微信登录页.png)
 
 - #### 首页部分页面展示
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/image-20210327002845431.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/image-20210327002845431.png)
 
 - #### 寻物页面部分展示
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/image-20210327003137254.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/image-20210327003137254.png)
 
 #### 3.后台管理系统(WarmSearch-web)
 
 - #### 登录页面展示
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/登录页面.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/登录页面.png)
 
 - #### 首页页面展示
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/后台首页.jpg)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/后台首页.jpg)
 
 - #### 部分功能页面展示
 
-![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/后端页面.png)
+![img](https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/失物招领.assets/后端页面.png)
 
 
 
@@ -179,9 +179,9 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 
 
-### 如果你能看到这里说明你肯定对我的项目感兴趣，那么请访问我的博客吧，里面会更新更详细的关于我这个项目的信息 [博客](https://dorian1015.github.io/)
+### 如果你能看到这里说明你肯定对我的项目感兴趣，那么请访问我的博客吧，里面会更新更详细的关于我这个项目的信息 [博客](https://lijinghailjh.github.io/)
 
-### 或者你也可以通过我的[Github](https://github.com/Dorian1015) 首页的邮箱来联系我 lijinghailjh@163.com
+### 或者你也可以通过我的[Github](https://github.com/lijinghailjh) 首页的邮箱来联系我 lijinghailjh@163.com
 
 
 
@@ -191,6 +191,6 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 |              这是我的微信，如果有需求可以联系我              |                           ੭ ᐕ)੭*⁾⁾                           |                          ╰(*´︶`*)╯                          |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/me/微信二维码.jpg" style="zoom:200%;" /> | <img src="https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/me/微信.jpg" style="zoom: 25%;" /> | <img src="https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/me/支付宝.jpg" style="zoom: 25%;" /> |
+| <img src="https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/me/微信二维码.jpg" style="zoom:200%;" /> | <img src="https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/me/微信.jpg" style="zoom: 25%;" /> | <img src="https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/me/支付宝.jpg" style="zoom: 25%;" /> |
 |         这是我的邮箱是 lijinghailjh@163.com 欢迎指点         |                                                              |                                                              |
 
