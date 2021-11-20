@@ -1,16 +1,16 @@
-<h1 align="center"> 校园失物招领网站 | Dorian </h1>
+<h1 align="center"> 校园失物招领网站 | 何逢君ljh </h1>
 
 <p align="center">
  	<a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/github/issues/Dorian1015/WarmSearch"
+		<img src="https://img.shields.io/github/issues/lijinghai/WarmSearch"
 			 alt="Version">
 	</a>
  	<a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/github/forks/Dorian1015/WarmSearch"
+		<img src="https://img.shields.io/github/forks/lijinghailjh/WarmSearch"
 			 alt="Status">
 	</a>
     <a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/github/stars/Dorian1015/WarmSearch"
+		<img src="https://img.shields.io/github/stars/lijinghai/WarmSearch"
 			 alt="Status">
 	</a>
 </p>
