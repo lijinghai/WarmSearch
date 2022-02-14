@@ -11,6 +11,7 @@ import priv.ljh.utils.MyPage;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -58,5 +59,10 @@ public class PcUserServiceImpl extends ServiceImpl<PcUserMapper, PcUser> impleme
         page = new MyPage(pcUsersList.subList(beginIndex, endIndex), total);
 
         return page;
+    }
+
+    @Override
+    public priv.ljh.utils.requestMessage.MyPage searchById(int pageNo, int limit, String idSorted, List<Map> users) {
+        return null;
     }
 }
