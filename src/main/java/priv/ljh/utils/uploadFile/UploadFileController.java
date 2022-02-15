@@ -43,7 +43,7 @@ public class UploadFileController {
         Map<String, Object> result = new HashMap<>();
         String originalName = file.getOriginalFilename();
         String format = sdf.format(new Date());
-        String realPath = "D:\\serach\\";
+        String realPath = "D:\\serach1\\";
         File folder = new File(realPath);
         if(!folder.exists()) {
             folder.mkdirs();

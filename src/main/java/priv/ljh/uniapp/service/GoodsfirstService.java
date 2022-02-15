@@ -1,11 +1,14 @@
 package priv.ljh.uniapp.service;
 
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import priv.ljh.uniapp.entity.Goodsfirst;
 import com.baomidou.mybatisplus.extension.service.IService;
 import priv.ljh.uniapp.entity.Unbo;
 import priv.ljh.utils.MyPage;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -26,4 +29,15 @@ public interface GoodsfirstService extends IService<Goodsfirst> {
      * @return
      */
     public MyPage searchUnbo(int pageNo, int limit, String idSorted, List<Goodsfirst> goodsfirsts);
+
+    /**
+     * 根据id查询
+     * @param pageNo
+     * @param limit
+     * @param idSorted
+     * @param users
+     * @return
+     */
+    public priv.ljh.utils.requestMessage.MyPage searchById(int pageNo, int limit, String idSorted, List<Map> goodsfirsts);
+
 }

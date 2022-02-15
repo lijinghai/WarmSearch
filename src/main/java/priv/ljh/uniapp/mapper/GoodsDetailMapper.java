@@ -30,7 +30,7 @@ public interface GoodsDetailMapper extends BaseMapper<GoodsDetail> {
      * @param id
      * @return
      */
-    @Select("select f.id,f.g_id,f.contact,f.create_time,f.imgdesc,f.imgname,f.imgurl,f.lostname,f.status,d.d_imgurl from goodsfirst f, goods_detail d where f.g_id = d.id and f.g_id=#{id}")
+    @Select("select f.id,f.g_id,f.contact,f.create_time,f.imgdesc,f.imgname,f.imgurl,f.lostname,f.status,d.id from goodsfirst f, category d where f.g_id = d.id and f.g_id=#{id}")
     List<Map> getAllGoods(@Param("id")Integer id);
 
     /**
