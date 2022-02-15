@@ -6,6 +6,7 @@ import priv.ljh.uniapp.entity.Goodsfirst;
 import priv.ljh.utils.MyPage;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -26,4 +27,14 @@ public interface FindListService extends IService<FindList> {
      * @return
      */
     public MyPage searchFindList(int pageNo, int limit, String idSorted, List<FindList> findLists);
+
+    /**
+     * 根据id查询
+     * @param pageNo
+     * @param limit
+     * @param idSorted
+     * @param findLists
+     * @return
+     */
+    public priv.ljh.utils.requestMessage.MyPage searchById(int pageNo, int limit, String idSorted, List<Map> findLists);
 }

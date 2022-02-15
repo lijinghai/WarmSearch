@@ -35,7 +35,7 @@ public interface GoodsfirstService extends IService<Goodsfirst> {
      * @param pageNo
      * @param limit
      * @param idSorted
-     * @param users
+     * @param goodsfirsts
      * @return
      */
     public priv.ljh.utils.requestMessage.MyPage searchById(int pageNo, int limit, String idSorted, List<Map> goodsfirsts);

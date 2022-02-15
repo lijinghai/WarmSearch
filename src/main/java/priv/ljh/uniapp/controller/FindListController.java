@@ -122,5 +122,16 @@ public class FindListController {
         res = new ResultResponse(Constants.STATUS_OK, Constants.MESSAGE_OK,page);
         return res;
     }
+
+    @ApiOperation("根据id查询信息")
+    @GetMapping("/id")
+    public priv.ljh.utils.requestMessage.ResultResponse queryUreteralDataById(@RequestParam("id") Integer id, @RequestParam("page") int pageNo, @RequestParam("limit") int limit, @RequestParam("sort") String idSort){
+        priv.ljh.utils.requestMessage.ResultResponse res = null;
+        List<Map> info = findListMapper.selectById(id);
+        log.info("info====>"+info);
+        priv.ljh.utils.requestMessage.MyPage page = this.findListService.searchById(pageNo, limit, idSort,info);
+        res = new priv.ljh.utils.requestMessage.ResultResponse(priv.ljh.utils.requestMessage.Constants.STATUS_OK, priv.ljh.utils.requestMessage.Constants.MESSAGE_OK,page);
+        return res;
+    }
 }
 

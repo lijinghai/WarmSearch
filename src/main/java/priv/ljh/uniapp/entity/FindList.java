@@ -1,10 +1,8 @@
 package priv.ljh.uniapp.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.util.Date;
-import com.baomidou.mybatisplus.annotation.Version;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -48,9 +46,9 @@ public class FindList implements Serializable {
     private String flStatus;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @ApiModelProperty(value = "发布时间")
-    @TableField("fl_createTime")
+    @TableField(fill = FieldFill.INSERT)
     private Date flCreatetime;
 
     @ApiModelProperty(value = "乐观锁")
