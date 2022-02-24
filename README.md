@@ -1,23 +1,23 @@
-<h1 align="center"> 校园失物招领网站 | 何逢君 </h1>
+<h1 align="center"> 校园失物招领网站 | lijinghai </h1>
 
 <p align="center">
  	<a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/github/issues/Dorian1015/WarmSearch"
+		<img src="https://img.shields.io/github/issues/lijinghailjh/WarmSearch"
 			 alt="Version">
 	</a>
  	<a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/github/forks/Dorian1015/WarmSearch"
+		<img src="https://img.shields.io/github/forks/lijinghailjh/WarmSearch"
 			 alt="Status">
 	</a>
     <a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/github/stars/Dorian1015/WarmSearch"
+		<img src="https://img.shields.io/github/stars/lijinghailjh/WarmSearch"
 			 alt="Status">
 	</a>
 </p>
 
 <p align="center">
      <a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/badge/何逢君-%E6%B5%B7-blue"
+		<img src="https://img.shields.io/badge/lijinghai-%E6%B5%B7-blue"
 			 alt="Status">
 	</a>
 </p>
@@ -74,9 +74,10 @@ web管理端code地址: https://github.com/lijinghailjh/WarmSearch-Web
 
 ## 说明
 
-> 本项目前后端分离，前端(WarmSearch-PC）[参考锤子商城](https://www.smartisan.com/)
-
-> 这是本项目的前台源码，后端源码请看[WarmSearch](https://github.com/lijinghailjh/WarmSearch),本项目包括后台管理系统([WarmSearch-Web](https://github.com/lijinghailjh/WarmSearch-Web))，前台系统（[WarmSearch-PC](https://github.com/lijinghailjh/WarmSearch-PC))，微信小程序部分（[WarmSearch-uniapp](https://github.com/lijinghailjh/WarmSearch-uniapp))
+> 本项目采用前后端分离技术 Springboot + vue + uniapp + Mysql
+>>1.本项目包括后台管理系统[WarmSearch-Web](https://github.com/lijinghailjh/WarmSearch-Web)
+>>2.前台系统[WarmSearch-PC](https://github.com/lijinghailjh/WarmSearch-PC)
+>>3.微信小程序部分[WarmSearch-uniapp](https://github.com/lijinghailjh/WarmSearch-uniapp)
 
 > #### 如果您觉得这项目还不错，可以在右上角`Star`支持一下，万分感谢！！！
 
