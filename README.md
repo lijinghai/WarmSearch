@@ -1,22 +1,22 @@
 <h1 align="center"> 校园失物招领网站 | lijinghai </h1>
 
 <p align="center">
- 	<a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/github/issues/lijinghailjh/WarmSearch"
+ 	<a href="https://github.com/lijinghai/WarmSearch">
+		<img src="https://img.shields.io/github/issues/lijinghai/WarmSearch"
 			 alt="Version">
 	</a>
- 	<a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/github/forks/lijinghailjh/WarmSearch"
+ 	<a href="https://github.com/lijinghai/WarmSearch">
+		<img src="https://img.shields.io/github/forks/lijinghai/WarmSearch"
 			 alt="Status">
 	</a>
-    <a href="https://github.com/lijinghailjh/WarmSearch">
-		<img src="https://img.shields.io/github/stars/lijinghailjh/WarmSearch"
+    <a href="https://github.com/lijinghai/WarmSearch">
+		<img src="https://img.shields.io/github/stars/lijinghai/WarmSearch"
 			 alt="Status">
 	</a>
 </p>
 
 <p align="center">
-     <a href="https://github.com/lijinghailjh/WarmSearch">
+     <a href="https://github.com/lijinghai/WarmSearch">
 		<img src="https://img.shields.io/badge/lijinghai-%E6%B5%B7-blue"
 			 alt="Status">
 	</a>
@@ -42,13 +42,13 @@
 
 项目采用前后端分离开发模式，PC端使用:Vue + Element-ui, 小程序使用Uni-app开发，后端数据API采用Java、Spring-Boot开发.
 
-PC端Code地址：https://github.com/lijinghailjh/WarmSearch-PC
+PC端Code地址：https://github.com/lijinghai/WarmSearch-PC
 
-小程序端code地址：https://github.com/lijinghailjh/WarmSearch-uniapp
+小程序端code地址：https://github.com/lijinghai/WarmSearch-uniapp
 
-后端code地址：https://github.com/lijinghailjh/WarmSearch
+后端code地址：https://github.com/lijinghai/WarmSearch
 
-web管理端code地址: https://github.com/lijinghailjh/WarmSearch-Web
+web管理端code地址: https://github.com/lijinghai/WarmSearch-Web
 
 ### 体验地址
 
@@ -64,7 +64,7 @@ web管理端code地址: https://github.com/lijinghailjh/WarmSearch-Web
 
 ##### 这是我的邮箱lijinghailjh@163.com,欢迎大家来指正
 
-##### 最新代码将在[GitHub](https://github.com/lijinghailjh)上持续更新
+##### 最新代码将在[GitHub](https://github.com/lijinghai)上持续更新
 
 ##### 在读大二学生（2021年5月8日）
 
